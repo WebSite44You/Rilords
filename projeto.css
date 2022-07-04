@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial'; 
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: rgb(0, 32, 32);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 70%;
+    height: 100%;
+    
+    margin: auto;
+}
+.linha{
+    width: 75%;
+    height: 1px;
+    background-color: rgb(0, 105, 105);
+    margin: 0 auto;
+}
+.linha-projeto{
+    width: 98%;
+    height: 1px;
+    background-color: rgb(0, 105, 105);
+    margin: 0 auto;
+}
+
+.subir{
+    position: fixed;
+    right: 20px;
+
+    background-color: rgb(0, 37, 37);
+    border: 1px solid rgb(0, 105, 105);
+    filter: drop-shadow(0px 0px 5px rgba(0, 253, 190, 0.301));
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+    animation: animar2 1s ease-in-out forwards;
+    opacity: 0;
+
+}
+.subir a{
+    color: white;
+    filter: drop-shadow(-2px -2px 2px rgba(0, 194, 168, 0.432));
+    padding: 10px;
+}
+
+
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 10vh;
+
+}
+li{
+    list-style: none;
+    animation: animar1 1s ease-in-out forwards;
+    opacity: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.header-menu nav ul{
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+.header-menu nav ul li a{
+    color: white;
+
+    transition: all 0.1s linear;
+}
+.header-menu nav ul li a:hover{
+    filter: drop-shadow(0px -2px 1px rgb(128, 128, 128));
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEXENDO NO SUB MENU */
+
+.menu-projetos p{
+    color: white;
+    cursor: pointer;
+    animation: animar1 1s ease-in-out forwards;
+    opacity: 0;
+}
+.menu-projetos p:hover{
+    filter: drop-shadow(0px -2px 1px rgb(128, 128, 128));
+}
+
+.menu-divisao{
+    width: 130px;
+    height: 60px;
+    display: none;
+
+    background-color: rgb(241, 241, 241);
+    filter: drop-shadow(2px 2px 1px rgb(138, 138, 138));
+    border: 5px solid transparent;
+    border-radius: 5px;
+
+    position: absolute;
+    z-index: 10;
+}
+.menu-divisao a{
+    color: rgb(0, 20, 20);
+    font-weight: 900;
+    
+    padding: 3px 0px;
+    border-radius: 5px;
+
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.menu-divisao a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 20, 20);
+}
+.menu-projetos:hover .menu-divisao{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN */
+
+section{
+    width: 100%;
+    background-color: rgb(0, 39, 39);
+    
+}
+.section-menu{
+    margin: auto;
+    padding: 50px 0;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+.hotel{
+    width: 78%;
+    text-align: center;
+
+    background-color: rgb(0, 37, 37);
+    border: 1px solid rgb(0, 105, 105);
+    filter: drop-shadow(0px 0px 5px rgba(0, 253, 190, 0.301));
+    border-radius: 5px;
+
+    margin: auto;
+    padding: 10px 10px;
+}
+.hotel h1{
+    font-size: 40px;
+
+    color: white;
+    filter: drop-shadow(-2px -2px 2px rgba(0, 194, 168, 0.432));
+
+    border-radius: 5px;
+    position: relative;
+
+    animation: letras 2s ease-in-out infinite;
+}
+
+@keyframes letras{
+    0%{
+    transform: rotate(0.5deg);
+    }
+    50%{
+    transform: rotate(-0.5deg);
+    }
+    100%{
+    transform: rotate(0.5deg);
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJETO*/
+
+.projeto{
+    background-color: rgb(0, 24, 24);
+    border: 1px solid rgb(0, 105, 105);
+    filter: drop-shadow(0px 0px 5px rgba(0, 253, 190, 0.301));
+    border-radius: 5px;
+
+    margin: auto;
+    padding: 10px 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 60%;
+    
+}
+.projeto img{
+    width: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(128, 128, 128, 0.527));
+    border-radius: 5px;
+}
+.nome-projeto{
+    margin: auto;
+    width: 95%;
+    min-width: 95%;
+
+    background-color: rgb(0, 37, 37);
+    color: white;
+    
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+.nome-projeto h2{
+    filter: drop-shadow(-2px -2px 2px rgba(0, 194, 168, 0.432));
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes animar1{
+    0%{
+        transform: translatey(-10px);
+    }
+    50%{
+        transform: translatey(10px);
+        opacity: 1;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+@keyframes animar2{
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 29.5vh;
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 14px;
+    color: white;
+}
+.direitos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(0, 24, 24);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 58, 58);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subir::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.subir:hover::before{
+    background-color: rgb(0, 50, 50);
+    border-radius: 5px;
+
+    width: 100%;
+    height: 100%;
+}
+
